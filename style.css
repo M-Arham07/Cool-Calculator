@@ -1,0 +1,91 @@
+@font-face {
+        font-family: 'SFLight';
+        src: url(SFBold.ttf);
+       }
+@font-face {
+    font-family: 'SFLight';
+    src: url(SFLight.ttf);
+   
+}
+
+        body {
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            background: #111;
+            border-radius: 40px;
+            box-shadow: 0 8px 40px #000a, 0 1.5px 0 #fff2 inset;
+            width: 320px;
+            padding: 30px 20px 20px 20px;
+        }
+        .display {
+            background: #222;
+            color: #fff;
+            font-size: 2.5rem;
+            border-radius: 20px;
+            padding: 20px 10px;
+            text-align: right;
+            margin-bottom: 20px;
+            min-height: 50px;
+            letter-spacing: 1px;
+            box-shadow: 0 1px 2px #0004 inset;
+          overflow: auto;
+          font-family: 'SFLight', sans-serif;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .btn {
+            background: #333;
+            color: #fff;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            box-shadow: 0 2px 8px #0002;
+            font-family: 'SFBold', sans-serif;
+        }
+        .btn:active {
+            background: #444;
+        }
+        .btn.orange {
+            background: #ff9500;
+            color: #fff;
+        }
+        .btn.gray {
+            background: #a5a5a5;
+            color: #111;
+        }
+        .btn.zero {
+            grid-column: span 2;
+            border-radius: 30px;
+            width: 100%;
+        }
+
+        .backspace-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .backspace-icon {
+            width: 28px;
+            height: 28px;
+            display: block;
+         
+            image-rendering: auto;
+        }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display"  ></div>
+        <div class="buttons">
+            <button class="btn gray" onclick="document.getElementById('display').innerText= '' ">AC</button>
+            <button class="btn gray">+/-</button>
+            <button class="btn gray backspace-btn" onclick="document.getElementById('display').innerText = document.getElementById('display').innerText.slice(0,-1);">
+                <img src="backspace-svgrepo-com.svg" alt="Backspace" class="backspace-icon">
+            </button>
+            <button class="btn orange" onclick="document.getElementById('display').innerText+='/'">÷</button>
+
+            <button class="btn" onclick="document.getElementById('display').innerText+='7'">7</button>
+            <button class="btn" onclick="document.getElementById('display').innerText+='8'">8</button>
+            <button class="btn" onclick="document.getElementById('display').innerText+='9'">9</button>
+            <button class="btn orange" onclick="document.getElementById('display').innerText+='*'">×</button>
+
+            <button class="btn" onclick="document.getElementById('display').innerText+='4'">4</button>
+            <button class="btn" onclick="document.getElementById('display').innerText+='5'">5</button>
+            <button class="btn" onclick="document.getElementById('display').innerText+='6'">6</button>
+            <button class="btn orange" onclick="document.getElementById('display').innerText+='-'" >-</button>
+
+            <button class="btn" onclick="document.getElementById('display').innerText+='1'">1</button>
+            <button class="btn" onclick="document.getElementById('display').innerText+='2'">2</button>
+            <button class="btn" onclick="document.getElementById('display').innerText+='3'">3</button>
+            <button class="btn orange"  onclick="document.getElementById('display').innerText+='+'">+</button>
+
+            <button class="btn zero"  onclick="document.getElementById('display').innerText+='0'">0</button>
+            <button class="btn"  onclick="document.getElementById('display').innerText+='.'">.</button>
+            <button class="btn orange"  onclick="get_answer()">=</button>
+
+        </div>
+    </div>
+
+
+
+    
+            <script>
+
+                let get_answer = () => {
+
+    
+                    let expression=document.getElementById("display").innerText;
+                    expression=eval(expression)
+                    
+                    expression == undefined || !isFinite(expression) || isNaN(expression) ? 
+                    document.getElementById("display").innerText="Syntax error"
+                    : document.getElementById("display").innerText=expression
+
+                }
+            </script>
+</body>
+</html>
