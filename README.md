@@ -1,2 +1,1 @@
-Calculator made with HTML, CSS and Javascript
-Works great
+Trying to create some stylish button here
