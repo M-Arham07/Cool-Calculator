@@ -43,6 +43,7 @@
             gap: 15px;
         }
         .btn {
+           
             background: #333;
             color: #fff;
             font-size: 1.5rem;
@@ -56,11 +57,23 @@
             cursor: pointer;
             transition: background 0.2s, color 0.2s;
             box-shadow: 0 2px 8px #0002;
+            transition: 0.1s;
             font-family: 'SFBold', sans-serif;
         }
         .btn:active {
+           
             background: #444;
+            border-radius: 20px;
+             transition: 0.1s;
+            
         }
+        .btn.zero:active{
+            border-radius: 20px;
+            transition: 0.1s;
+
+        }
+
+
         .btn.orange {
             background: #ff9500;
             color: #fff;
@@ -68,11 +81,15 @@
         .btn.gray {
             background: #a5a5a5;
             color: #111;
+            
         }
+
+       
         .btn.zero {
             grid-column: span 2;
             border-radius: 30px;
             width: 100%;
+            transition: 0.1s;
         }
 
         .backspace-btn {
